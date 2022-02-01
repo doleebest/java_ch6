@@ -1,7 +1,9 @@
 class Ex6_4 {
 	public static void main(String args[]) {
-		MyMath mm = new MyMath();
-		long result1 = mm.add(5L, 3L);
+		MyMath mm = new MyMath(); // 객체 생성
+		long result = mm.max(5,3);
+		long result1 = mm.add(5L, 3L); // 객체 사용 (메서드 호출)
+//		long result1 = mm.add(5, 3); // 같은 말임
 		long result2 = mm.subtract(5L, 3L);
 		long result3 = mm.multiply(5L, 3L);
 		double result4 = mm.divide(5L, 3L);
@@ -13,11 +15,23 @@ class Ex6_4 {
 	}
  }
 
- class MyMath {
+ class MyMath { // 메서드 작성(클래스 작성) 클래스 영역에만 정의 가능
 	long add(long a, long b) {
 		long result = a + b;
 		return result;
-	//	return a + b;	// ���� �� ���� �̿� ���� �� �ٷ� ������ �� �� �ִ�.
+	//	return a + b;	// 위의 두 줄을 이와 같이 한 줄로 간단히 할 수 있다.
+	}
+	//두 값을 받아서 둘중에 큰값을 변환하는 메서드를 작성하시오.
+	long max(long a, long b)
+	{
+		long result =0;
+		if(a>b)
+			result = a;
+		else {
+			result = b;
+		// return a>b ? a : b
+		}
+		return result;
 	}
 	long subtract(long a, long b) { return a - b; }
 	long multiply(long a, long b) { return a * b; }
@@ -25,3 +39,4 @@ class Ex6_4 {
 		return a / b;
 	}
  }
+
