@@ -1,11 +1,13 @@
 class Data_1 {
 	int value;
+	Data_1() {}// ê¸°ë³¸ìƒì„±ìë¥¼ ì»´íŒŒì¼ëŸ¬ê°€ ìë™ ìƒì„±
 }
 
 class Data_2 {
 	int value;
 
-	Data_2(int x) {   // ¸Å°³º¯¼ö°¡ ÀÖ´Â »ı¼ºÀÚ.
+	Data_2(){} // ê¸°ë³¸ìƒì„±ì
+	Data_2(int x) {   // ë§¤ê°œë³€ìˆ˜ê°€ ìˆëŠ” ìƒì„±ì.
 		value = x;
 	}
 }
@@ -13,6 +15,6 @@ class Data_2 {
 class Ex6_11 {
 	public static void main(String[] args) {
 		Data_1 d1 = new Data_1();
-		Data_2 d2 = new Data_2(); // compile error¹ß»ı
+		Data_2 d2 = new Data_2(); // compile errorë°œìƒ
 	}
 }
